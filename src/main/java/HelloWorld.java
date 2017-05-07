@@ -22,6 +22,7 @@ public class HelloWorld extends AbstractHandler {
         Server server = new Server(8080);
         server.setHandler(new HelloWorld());
         server.start();
+        System.out.println(server.getThreadPool().getIdleThreads());
         server.join();
     }
 }
